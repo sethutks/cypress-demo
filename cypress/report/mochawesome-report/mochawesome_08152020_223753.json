@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-15T17:07:36.784Z",
+    "end": "2020-08-15T17:07:53.615Z",
+    "duration": 16831,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bacf9d5a-9d92-41f3-b768-95b97bd97554",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7777dd3-aa8d-46d8-a6a9-4477de301a47",
+          "title": "Leaftaps Application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 Create Lead - Mandate Fields alone",
+              "fullTitle": "Leaftaps Application TC01 Create Lead - Mandate Fields alone",
+              "timedOut": null,
+              "duration": 6102,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "Error: Step implementation missing for: user clicks on the CRM/SFA link",
+                "estack": "Error: Step implementation missing for: user clicks on the CRM/SFA link\n    at Context.resolveAndRunStepDefinition (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:12305:11)\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:11644:35)",
+                "diff": null
+              },
+              "uuid": "6f796291-42f1-414f-8329-85480c8c179d",
+              "parentUUID": "a7777dd3-aa8d-46d8-a6a9-4477de301a47",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6f796291-42f1-414f-8329-85480c8c179d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6102,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

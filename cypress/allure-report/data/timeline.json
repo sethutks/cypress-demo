@@ -1,0 +1,57 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "TC001 Create Lead with mandate fields alone",
+    "uid" : "947440bc4f0b1f55",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1597557453538,
+      "stop" : 1597557491806,
+      "duration" : 38268
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC001 Create Lead with mandate fields alone",
+    "uid" : "d5afadb25839a5db",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1597556158060,
+      "stop" : 1597556162279,
+      "duration" : 4219
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC001 Create Lead with mandate fields alone",
+    "uid" : "3c48a660d034a6ed",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1597557236437,
+      "stop" : 1597557249367,
+      "duration" : 12930
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "TC001 Create Lead with mandate fields alone",
+    "uid" : "d72eb9b42622dfb3",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1597556450090,
+      "stop" : 1597556494879,
+      "duration" : 44789
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

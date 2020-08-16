@@ -1,0 +1,11 @@
+[ {
+  "uid" : "947440bc4f0b1f55",
+  "name" : "TC001 Create Lead with mandate fields alone",
+  "time" : {
+    "start" : 1597557453538,
+    "stop" : 1597557491806,
+    "duration" : 38268
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

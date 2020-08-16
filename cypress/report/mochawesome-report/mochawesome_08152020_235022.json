@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-15T18:19:56.645Z",
+    "end": "2020-08-15T18:20:22.870Z",
+    "duration": 26225,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e61aa8af-2a46-469f-9c7b-84759634d0a0",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e27ee7c-f6c3-4eff-8d41-4bc3f0355f0d",
+          "title": "Leaftaps",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01",
+              "fullTitle": "Leaftaps TC01",
+              "timedOut": null,
+              "duration": 25909,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://leaftaps.com/opentaps\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 13.234.97.126:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://leaftaps.com/opentaps\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 13.234.97.126:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:55753/__cypress/runner/cypress_runner.js:156598:23\n    at visitFailedByErr (http://localhost:55753/__cypress/runner/cypress_runner.js:155959:12)\n    at http://localhost:55753/__cypress/runner/cypress_runner.js:156597:11\n    at tryCatcher (http://localhost:55753/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55753/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (http://localhost:55753/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (http://localhost:55753/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (http://localhost:55753/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (http://localhost:55753/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (http://localhost:55753/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:55753/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (http://localhost:55753/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at eval (http://localhost:55753/__cypress/tests?p=cypress\\integration\\CreateLead.feature:73:6)\n    at eval (http://localhost:55753/__cypress/tests?p=cypress\\integration\\CreateLead.feature:12226:44)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 13.234.97.126:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1128:14)\n  \nFrom Your Spec Code:\n    at eval (http://localhost:55753/__cypress/tests?p=cypress\\integration\\CreateLead.feature:73:6)\n    at eval (http://localhost:55753/__cypress/tests?p=cypress\\integration\\CreateLead.feature:12226:44)",
+                "diff": null
+              },
+              "uuid": "0e60e0e2-917f-4dfa-a61d-e4381e0e241c",
+              "parentUUID": "6e27ee7c-f6c3-4eff-8d41-4bc3f0355f0d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0e60e0e2-917f-4dfa-a61d-e4381e0e241c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

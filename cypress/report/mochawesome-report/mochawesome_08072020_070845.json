@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-07T01:38:40.467Z",
+    "end": "2020-08-07T01:38:45.296Z",
+    "duration": 4829,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f966d30d-8038-4a57-957c-569ec56a00e6",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\LearnFileHandling.js",
+      "file": "cypress\\integration\\week2\\LearnFileHandling.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ea7f8b1-b39b-4e4b-a220-29c88ac829fd",
+          "title": "Learn Cypress File Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cypress commands - readFile, writeFile and Fixture",
+              "fullTitle": "Learn Cypress File Handling Cypress commands - readFile, writeFile and Fixture",
+              "timedOut": null,
+              "duration": 4692,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var cmpName = cy.readFile('cypress\\fixtures\\TextFile.json').its('companyName');\ncy.log('The company Name: ' + cmpName);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: `cy.readFile(\"cypress\fixturesTextFile.json\")` failed because the file does not exist at the following path:\n\n`C:\\Cypress\\cypress\fixturesTextFile.json`\n\nhttps://on.cypress.io/readfile",
+                "estack": "AssertionError: Timed out retrying: `cy.readFile(\"cypress\fixturesTextFile.json\")` failed because the file does not exist at the following path:\n\n`C:\\Cypress\\cypress\fixturesTextFile.json`\n\nhttps://on.cypress.io/readfile\n    at Context.eval (http://localhost:64025/__cypress/tests?p=cypress\\integration\\week2\\LearnFileHandling.js:7:22)",
+                "diff": null
+              },
+              "uuid": "5b789656-062f-41f9-86ed-9895acd5a31c",
+              "parentUUID": "5ea7f8b1-b39b-4e4b-a220-29c88ac829fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5b789656-062f-41f9-86ed-9895acd5a31c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4692,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

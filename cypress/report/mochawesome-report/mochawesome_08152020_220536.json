@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-15T16:35:20.745Z",
+    "end": "2020-08-15T16:35:36.836Z",
+    "duration": 16091,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "715c9a49-83c4-42d5-80fe-a2764a3dbbab",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66163929-9979-453e-bc1f-223ac883d500",
+          "title": "Login Leaftaps Application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 Login for Leaftaps - Positive Flow",
+              "fullTitle": "Login Leaftaps Application TC01 Login for Leaftaps - Positive Flow",
+              "timedOut": null,
+              "duration": 608,
+              "state": "failed",
+              "speed": "slow",
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe 'task' event has not been registered in the plugins file. You must register it before using cy.task()\n\nFix this in your plugins file here:\nC:\\Cypress\\cypress\\plugins\\index.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe 'task' event has not been registered in the plugins file. You must register it before using cy.task()\n\nFix this in your plugins file here:\nC:\\Cypress\\cypress\\plugins\\index.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at http://leaftaps.com/__cypress/runner/cypress_runner.js:158361:21\n    at tryCatcher (http://leaftaps.com/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (http://leaftaps.com/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (http://leaftaps.com/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (http://leaftaps.com/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (http://leaftaps.com/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (http://leaftaps.com/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (http://leaftaps.com/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://leaftaps.com/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (http://leaftaps.com/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\support\\index.js:89:12)\nFrom Your Spec Code:\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\support\\index.js:89:12)",
+                "diff": null
+              },
+              "uuid": "9fc76850-d5e0-49a8-9820-266ebe2ff6b6",
+              "parentUUID": "66163929-9979-453e-bc1f-223ac883d500",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9fc76850-d5e0-49a8-9820-266ebe2ff6b6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 608,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

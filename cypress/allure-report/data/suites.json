@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Leaftaps Lead Module",
+    "children" : [ {
+      "name" : "TC001 Create Lead with mandate fields alone",
+      "uid" : "947440bc4f0b1f55",
+      "parentUid" : "3dad85368c110b1823bcbe9c6bf404c2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1597557453538,
+        "stop" : 1597557491806,
+        "duration" : 38268
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3dad85368c110b1823bcbe9c6bf404c2"
+  } ]
+}

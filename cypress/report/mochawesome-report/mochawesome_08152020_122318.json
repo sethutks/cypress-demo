@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-15T06:52:02.889Z",
+    "end": "2020-08-15T06:53:18.227Z",
+    "duration": 75338,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63a51443-a2e6-4523-8d4d-03a4ea540b25",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\RunMyntraIterations.js",
+      "file": "cypress\\integration\\week2\\RunMyntraIterations.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71baef49-edab-4f79-9296-7fe09c3e2aea",
+          "title": "Myntra Product search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sunglasses search and validate Similar products",
+              "fullTitle": "Myntra Product search Sunglasses search and validate Similar products",
+              "timedOut": null,
+              "duration": 34215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.myntra.com/', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n});\ncy.get('input[class = desktop-searchBar]').type(eachData.searchProduct).type('{enter}');\ncy.wait(6000);\ncy.get('input[value=\"'.concat(eachData.searchBrand).concat('\"]')).first().click({\n  force: true\n});\ncy.wait(6000);\nvar searchItemLctr = '//h4[text()=\"'.concat(eachData.searchItem).concat('\"]');\ncy.xpath(searchItemLctr).siblings('.product-sizes').first().invoke('text').then(function ($productSize) {\n  var productSize = $productSize;\n  cy.log(\"Productb Size: \", productSize);\n});\ncy.xpath(searchItemLctr).siblings('.product-price').first().invoke('text').then(function ($productPrice) {\n  var productPrice = $productPrice;\n  cy.log(\"Productb Price: \", productPrice);\n});\ncy.get('.product-ratingsContainer').first().siblings('a').trigger('mouseover');\ncy.wait(5000);\ncy.get('.image-grid-similarColorsCta').first().click({\n  force: true\n});\ncy.get('.results-similarItemContainer').find('li').then(function (listing) {\n  var listingCount = Cypress.$(listing).length;\n  assert.isAbove(listingCount, 5, 'Similar products are greater than 5');\n});",
+              "err": {},
+              "uuid": "178a7276-173e-41c3-8288-41e87c590031",
+              "parentUUID": "71baef49-edab-4f79-9296-7fe09c3e2aea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sunglasses search and validate Similar products",
+              "fullTitle": "Myntra Product search Sunglasses search and validate Similar products",
+              "timedOut": null,
+              "duration": 29583,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.myntra.com/', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n});\ncy.get('input[class = desktop-searchBar]').type(eachData.searchProduct).type('{enter}');\ncy.wait(6000);\ncy.get('input[value=\"'.concat(eachData.searchBrand).concat('\"]')).first().click({\n  force: true\n});\ncy.wait(6000);\nvar searchItemLctr = '//h4[text()=\"'.concat(eachData.searchItem).concat('\"]');\ncy.xpath(searchItemLctr).siblings('.product-sizes').first().invoke('text').then(function ($productSize) {\n  var productSize = $productSize;\n  cy.log(\"Productb Size: \", productSize);\n});\ncy.xpath(searchItemLctr).siblings('.product-price').first().invoke('text').then(function ($productPrice) {\n  var productPrice = $productPrice;\n  cy.log(\"Productb Price: \", productPrice);\n});\ncy.get('.product-ratingsContainer').first().siblings('a').trigger('mouseover');\ncy.wait(5000);\ncy.get('.image-grid-similarColorsCta').first().click({\n  force: true\n});\ncy.get('.results-similarItemContainer').find('li').then(function (listing) {\n  var listingCount = Cypress.$(listing).length;\n  assert.isAbove(listingCount, 5, 'Similar products are greater than 5');\n});",
+              "err": {},
+              "uuid": "4c7f1f42-1d39-4097-bdbf-4be179c3c9be",
+              "parentUUID": "71baef49-edab-4f79-9296-7fe09c3e2aea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "178a7276-173e-41c3-8288-41e87c590031",
+            "4c7f1f42-1d39-4097-bdbf-4be179c3c9be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 63798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

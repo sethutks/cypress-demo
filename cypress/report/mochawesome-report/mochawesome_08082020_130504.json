@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-08T07:34:49.543Z",
+    "end": "2020-08-08T07:35:04.466Z",
+    "duration": 14923,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06b12080-d567-4597-a7d8-cd555c008121",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\Classroom.js",
+      "file": "cypress\\integration\\week2\\Classroom.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8901a27-9692-4f07-8caf-84301afc5046",
+          "title": "Learn Webtable",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Erail Webtable",
+              "fullTitle": "Learn Webtable Erail Webtable",
+              "timedOut": null,
+              "duration": 6052,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://www.leafground.com/pages/sorttable.html');\ncy.get('#table_id').find('tbody').find('tr').as('tableRows');\ncy.screenshot('File1');\ncy.get('@tableRows').each(function ($tr, index, $trs) {\n  var emp_id = $tr.find('td').first().text();\n  if (emp_id < 1007) {\n    cy.log($tr.find('td').last().prev().text());\n  }\n});",
+              "err": {},
+              "uuid": "c67334fa-dfac-44a3-8e6d-b051f99855f8",
+              "parentUUID": "c8901a27-9692-4f07-8caf-84301afc5046",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c67334fa-dfac-44a3-8e6d-b051f99855f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6052,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

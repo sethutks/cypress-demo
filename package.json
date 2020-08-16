@@ -1,0 +1,27 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "cypress": "^4.11.0",
+    "cypress-xpath": "^1.6.0",
+    "xpath": "^0.0.27"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^1.8.0",
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-16T05:53:45.837Z",
+    "end": "2020-08-16T05:54:09.797Z",
+    "duration": 23960,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "57a73ff7-809b-462c-9262-b7162f8e7c6a",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2cc5fde2-9a70-4be5-ba3f-f01bb8eda6ea",
+          "title": "Leaftaps Lead Module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC001 Create Lead with mandate fields alone",
+              "fullTitle": "Leaftaps Lead Module TC001 Create Lead with mandate fields alone",
+              "timedOut": null,
+              "duration": 13042,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Leads' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Leads' but never did.\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:57:6)\n    at Context.resolveAndRunStepDefinition (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:12299:9)\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:11641:35)",
+                "diff": null
+              },
+              "uuid": "e52f7ce8-6dab-4922-971c-d23e5bbd493f",
+              "parentUUID": "2cc5fde2-9a70-4be5-ba3f-f01bb8eda6ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e52f7ce8-6dab-4922-971c-d23e5bbd493f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13042,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

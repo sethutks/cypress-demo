@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-06T10:28:40.405Z",
+    "end": "2020-08-06T10:29:30.650Z",
+    "duration": 50245,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0515fc3f-6893-400d-92f2-e7a1a8e30f9c",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\Myntra.js",
+      "file": "cypress\\integration\\week2\\Myntra.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "551b5a61-c79c-44fe-94fe-1f546fdcd1f3",
+          "title": "Myntra Product search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sunglasses search and validate Similar products",
+              "fullTitle": "Myntra Product search Sunglasses search and validate Similar products",
+              "timedOut": null,
+              "duration": 38322,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.Screenshot.defaults({\n  capture: 'runner'\n});\ncy.visit('https://www.myntra.com/', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n});\ncy.get('input[class = desktop-searchBar]').type('Sunglasses').type('{enter}');\ncy.wait(6000);\ncy.get('input[value=\"Polaroid\"]').first().click({\n  force: true\n});\ncy.wait(6000);\ncy.xpath(\"//h4[text()='Men Rectangle Sunglasses']\").siblings('.product-sizes').first().invoke('text').then(function ($productSize) {\n  var productSize = $productSize;\n  cy.log(\"Productb Size: \", productSize);\n});\ncy.xpath(\"//h4[text()='Men Rectangle Sunglasses']\").siblings('.product-price').first().invoke('text').then(function ($productPrice) {\n  var productPrice = $productPrice;\n  cy.log(\"Productb Price: \", productPrice);\n});\ncy.get('.product-ratingsContainer').first().siblings('a').trigger('mouseover');\ncy.wait(5000);\ncy.get('.image-grid-similarColorsCta').first().click({\n  force: true\n});\nvar listofSimilarProducts = cy.get('.results-similarItemContainer').find('li').then(function (listing) {\n  var listingCount = Cypress.$(listing).length;\n  assert.isAbove(listingCount, 5, 'Similar products are greater than 5');\n});",
+              "err": {},
+              "uuid": "61855a6b-81de-4a8a-bad3-9e2a37dc92f9",
+              "parentUUID": "551b5a61-c79c-44fe-94fe-1f546fdcd1f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "61855a6b-81de-4a8a-bad3-9e2a37dc92f9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38322,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

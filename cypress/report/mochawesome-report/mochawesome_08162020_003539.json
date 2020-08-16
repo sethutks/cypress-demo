@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2020-08-15T19:05:04.676Z",
+    "end": "2020-08-15T19:05:39.752Z",
+    "duration": 35076,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "de05d91b-3540-4d13-88b4-08eb2b156eb1",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9093ca1b-b402-45e0-896c-6128d0333909",
+          "title": "Leaftaps Lead Module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 Create Lead - Mandate values alone",
+              "fullTitle": "Leaftaps Lead Module TC01 Create Lead - Mandate values alone",
+              "timedOut": null,
+              "duration": 146,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function() {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:56397/__cypress/tests?p=cypress\\integration\\CreateLead.feature:11677:10)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:56397/__cypress/tests?p=cypress\\integration\\CreateLead.feature:11677:10)",
+                "diff": null
+              },
+              "uuid": "22513c2c-cf35-4680-9a20-353f32b105c1",
+              "parentUUID": "9093ca1b-b402-45e0-896c-6128d0333909",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC02 Create Lead - Mandate values alone",
+              "fullTitle": "Leaftaps Lead Module TC02 Create Lead - Mandate values alone",
+              "timedOut": null,
+              "duration": 26033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "c0016ab3-cdc1-4df8-83bd-5597bbd45e5b",
+              "parentUUID": "9093ca1b-b402-45e0-896c-6128d0333909",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c0016ab3-cdc1-4df8-83bd-5597bbd45e5b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "22513c2c-cf35-4680-9a20-353f32b105c1"
+          ],
+          "duration": 26179,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

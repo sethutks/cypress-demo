@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-08T03:12:55.835Z",
+    "end": "2020-08-08T03:13:26.032Z",
+    "duration": 30197,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "469d824f-5f95-4415-ae1b-89f4ec0c603a",
+      "title": "",
+      "fullFile": "cypress\\integration\\week1\\homework\\MyntraAssign.js",
+      "file": "cypress\\integration\\week1\\homework\\MyntraAssign.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51bc00d4-48bc-41b9-8df6-2910d9c88bef",
+          "title": "Myntra Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sunglasses",
+              "fullTitle": "Myntra Search Sunglasses",
+              "timedOut": null,
+              "duration": 16147,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Variable to store desired text\nvar opt = \"\"; //  1. Navigate to Myntra website through \"https://www.myntra.com/\"\ncy.visit('https://myntra.com', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\" // to load header images\n  }\n}); //  2. In Searchbox, enter Sunglasses and hit enter button\ncy.get(\".desktop-searchBar\").type(\"sunglasses{enter}\"); //  3. In Result page, filter the glasess with Brand \"Polaroid\".\ncy.get(\"input[value='Polaroid']\").check({\n  force: true\n}).wait(2000); //  4. Print the Product size of 'Men Rectangle Sunglasses'.\ncy.get(\"li:nth-of-type(4) .product-productMetaInfo\").trigger('mouseover').find(\".product-sizeInventoryPresent\").invoke(\"text\").then(function (el) {\n  opt = el;\n  cy.log(opt);\n}); //  5. Print the Product price including the discounted price of 'Men Rectangle Sunglasses'.\n//Discounted Price\ncy.get(\"li:nth-of-type(4) .product-productMetaInfo\").trigger('mouseover').find(\".product-discountedPrice\").invoke(\"text\").then(function (el) {\n  opt = el;\n  cy.log(opt);\n}); //Product Price\ncy.get(\"li:nth-of-type(4) .product-productMetaInfo\").trigger('mouseover').find(\".product-strike\").invoke(\"text\").then(function (el) {\n  opt = el;\n  cy.log(opt);\n}); //  6. Mouse over on the image of the first result and click on View Similar Items\ncy.get(\".results-base >li:nth-of-type(1)\").trigger('mouseover').wait(3000).find(\".image-grid-iconText\").click({\n  force: true\n}); //  7. Find the number of similar items and ensure the count is more than 5.\ncy.get(\".results-similarItemContainer li\").its('length').should('be.gt', 5);",
+              "err": {},
+              "uuid": "443af57e-982c-4987-b6b0-de3b827421e7",
+              "parentUUID": "51bc00d4-48bc-41b9-8df6-2910d9c88bef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "443af57e-982c-4987-b6b0-de3b827421e7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

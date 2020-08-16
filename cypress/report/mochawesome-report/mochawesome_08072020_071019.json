@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-07T01:40:19.020Z",
+    "end": "2020-08-07T01:40:19.352Z",
+    "duration": 332,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f1829937-cb67-4fd4-8683-695b9e0b287d",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\LearnFileHandling.js",
+      "file": "cypress\\integration\\week2\\LearnFileHandling.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0e4fcd3-0a9c-4715-a0d5-0a689f810c53",
+          "title": "Learn Cypress File Handling",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cypress commands - readFile, writeFile and Fixture",
+              "fullTitle": "Learn Cypress File Handling Cypress commands - readFile, writeFile and Fixture",
+              "timedOut": null,
+              "duration": 211,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var cmpName = cy.readFile('cypress/fixtures/TextFile.json').its('companyName');\ncy.log('The company Name: ' + cmpName);",
+              "err": {},
+              "uuid": "7c5fb547-1134-4d0b-ac07-900cebe6eba9",
+              "parentUUID": "e0e4fcd3-0a9c-4715-a0d5-0a689f810c53",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7c5fb547-1134-4d0b-ac07-900cebe6eba9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 211,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

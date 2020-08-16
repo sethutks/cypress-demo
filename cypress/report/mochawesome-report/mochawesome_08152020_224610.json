@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-15T17:15:45.496Z",
+    "end": "2020-08-15T17:16:10.504Z",
+    "duration": 25008,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1c97c1f0-1962-4cb3-b659-7359ae9eb38b",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a375dfd-5f1b-4c6e-b9b0-d915f77a3dcf",
+          "title": "Leaftaps Application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 Create Lead - Mandate Fields alone",
+              "fullTitle": "Leaftaps Application TC01 Create Lead - Mandate Fields alone",
+              "timedOut": null,
+              "duration": 14925,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach(step =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "Error: Step implementation missing for: user enters company name Testleaf in the create lead page",
+                "estack": "Error: Step implementation missing for: user enters company name Testleaf in the create lead page\n    at Context.resolveAndRunStepDefinition (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:12305:11)\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\CreateLead.feature:11644:35)",
+                "diff": null
+              },
+              "uuid": "63c6d885-9ec3-439a-8a94-d8560465e44f",
+              "parentUUID": "0a375dfd-5f1b-4c6e-b9b0-d915f77a3dcf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "63c6d885-9ec3-439a-8a94-d8560465e44f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14925,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-09T03:44:37.063Z",
+    "end": "2020-08-09T03:46:00.483Z",
+    "duration": 83420,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "df56123f-ace5-42d8-a37a-d9d7706b8a9d",
+      "title": "",
+      "fullFile": "cypress\\integration\\week2\\RunMyntraIterations.js",
+      "file": "cypress\\integration\\week2\\RunMyntraIterations.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc4f5b22-1eb0-425c-ad63-50cdabb31651",
+          "title": "Myntra Product search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sunglasses search and validate Similar products",
+              "fullTitle": "Myntra Product search Sunglasses search and validate Similar products",
+              "timedOut": null,
+              "duration": 36564,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.myntra.com/', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n});\ncy.get('input[class = desktop-searchBar]').type(eachData.searchProduct).type('{enter}');\ncy.wait(6000);\ncy.get('input[value=\"'.concat(eachData.searchBrand).concat('\"]')).first().click({\n  force: true\n});\ncy.wait(6000);\nvar searchItemLctr = '//h4[text()=\"'.concat(eachData.searchItem).concat('\"]');\ncy.xpath(searchItemLctr).siblings('.product-sizes').first().invoke('text').then(function ($productSize) {\n  var productSize = $productSize;\n  cy.log(\"Productb Size: \", productSize);\n});\ncy.xpath(searchItemLctr).siblings('.product-price').first().invoke('text').then(function ($productPrice) {\n  var productPrice = $productPrice;\n  cy.log(\"Productb Price: \", productPrice);\n});\ncy.get('.product-ratingsContainer').first().siblings('a').trigger('mouseover');\ncy.wait(5000);\ncy.get('.image-grid-similarColorsCta').first().click({\n  force: true\n});\ncy.get('.results-similarItemContainer').find('li').then(function (listing) {\n  var listingCount = Cypress.$(listing).length;\n  assert.isAbove(listingCount, 5, 'Similar products are greater than 5');\n});",
+              "err": {},
+              "uuid": "35b41766-8063-45ed-92c5-50652127fd5e",
+              "parentUUID": "fc4f5b22-1eb0-425c-ad63-50cdabb31651",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Sunglasses search and validate Similar products",
+              "fullTitle": "Myntra Product search Sunglasses search and validate Similar products",
+              "timedOut": null,
+              "duration": 35271,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.myntra.com/', {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n});\ncy.get('input[class = desktop-searchBar]').type(eachData.searchProduct).type('{enter}');\ncy.wait(6000);\ncy.get('input[value=\"'.concat(eachData.searchBrand).concat('\"]')).first().click({\n  force: true\n});\ncy.wait(6000);\nvar searchItemLctr = '//h4[text()=\"'.concat(eachData.searchItem).concat('\"]');\ncy.xpath(searchItemLctr).siblings('.product-sizes').first().invoke('text').then(function ($productSize) {\n  var productSize = $productSize;\n  cy.log(\"Productb Size: \", productSize);\n});\ncy.xpath(searchItemLctr).siblings('.product-price').first().invoke('text').then(function ($productPrice) {\n  var productPrice = $productPrice;\n  cy.log(\"Productb Price: \", productPrice);\n});\ncy.get('.product-ratingsContainer').first().siblings('a').trigger('mouseover');\ncy.wait(5000);\ncy.get('.image-grid-similarColorsCta').first().click({\n  force: true\n});\ncy.get('.results-similarItemContainer').find('li').then(function (listing) {\n  var listingCount = Cypress.$(listing).length;\n  assert.isAbove(listingCount, 5, 'Similar products are greater than 5');\n});",
+              "err": {
+                "message": "AssertionError: Similar products are greater than 5: expected 1 to be above 5",
+                "estack": "AssertionError: Similar products are greater than 5: expected 1 to be above 5\n    at Context.eval (https://www.myntra.com/__cypress/tests?p=cypress\\integration\\week2\\RunMyntraIterations.js:50:16)",
+                "diff": "- 1\n+ 5\n"
+              },
+              "uuid": "2d2df495-93a3-4cde-b34e-83c770a2024a",
+              "parentUUID": "fc4f5b22-1eb0-425c-ad63-50cdabb31651",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35b41766-8063-45ed-92c5-50652127fd5e"
+          ],
+          "failures": [
+            "2d2df495-93a3-4cde-b34e-83c770a2024a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 71835,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

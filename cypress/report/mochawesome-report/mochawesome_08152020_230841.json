@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-08-15T17:38:39.688Z",
+    "end": "2020-08-15T17:38:41.024Z",
+    "duration": 1336,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dff8f967-cc55-4f37-93d0-21dbf17d8a68",
+      "title": "",
+      "fullFile": "cypress\\integration\\CreateLead.feature",
+      "file": "cypress\\integration\\CreateLead.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 575,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe 'task' event has not been registered in the plugins file. You must register it before using cy.task()\n\nFix this in your plugins file here:\nC:\\Cypress\\cypress\\plugins\\index.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+            "estack": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe 'task' event has not been registered in the plugins file. You must register it before using cy.task()\n\nFix this in your plugins file here:\nC:\\Cypress\\cypress\\plugins\\index.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at http://localhost:54839/__cypress/runner/cypress_runner.js:158361:21\n    at tryCatcher (http://localhost:54839/__cypress/runner/cypress_runner.js:9956:23)\n    at Promise._settlePromiseFromHandler (http://localhost:54839/__cypress/runner/cypress_runner.js:7891:31)\n    at Promise._settlePromise (http://localhost:54839/__cypress/runner/cypress_runner.js:7948:18)\n    at Promise._settlePromise0 (http://localhost:54839/__cypress/runner/cypress_runner.js:7993:10)\n    at Promise._settlePromises (http://localhost:54839/__cypress/runner/cypress_runner.js:8069:18)\n    at _drainQueueStep (http://localhost:54839/__cypress/runner/cypress_runner.js:4663:12)\n    at _drainQueue (http://localhost:54839/__cypress/runner/cypress_runner.js:4656:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:54839/__cypress/runner/cypress_runner.js:4672:5)\n    at Async.drainQueues (http://localhost:54839/__cypress/runner/cypress_runner.js:4542:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:54839/__cypress/tests?p=cypress\\support\\index.js:92:12)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:54839/__cypress/tests?p=cypress\\support\\index.js:92:12)",
+            "diff": null
+          },
+          "uuid": "2ca04e1a-2296-44d4-9922-d6a3c866ef79",
+          "parentUUID": "dff8f967-cc55-4f37-93d0-21dbf17d8a68",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "2ca04e1a-2296-44d4-9922-d6a3c866ef79"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 575,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
