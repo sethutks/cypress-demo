@@ -1,0 +1,10 @@
+version: '3.2'
+services:
+  leaftaps:
+    image: test:v2
+    command: ["./node_modules/.bin/cypress", "run", "--spec", "cypress/integration/01_login_spec.js", "--record", "--key", "e2a0e96c-0b26-43c6-8a46-0cf0111263f2"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cypress
+    network_mode: host

@@ -22,7 +22,7 @@ import {Given, And, When, Then} from "cypress-cucumber-preprocessor/steps"
 //     cy.contains("CRM/SFA").click();
 // })
 
-And('user clicks on the Leads link', () => {
+Given('user clicks on the Leads link', () => {
     cy.contains("Leads").click();
 })
 

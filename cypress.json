@@ -1,17 +1,18 @@
 {
-    "defaultCommandTimeout": 7000,
-    "reporter": "./node_modules/mochawesome/src/mochawesome.js",
-    "reporterOptions": {
-        "reportDir": "cypress/report/mochawesome-report",
-        "overwrite": false,
-        "html": true,
-        "json": true,
-        "timestamp": "mmddyyyy_HHMMss"
-     },
-     "screenshotsFolder": "./cypress/snaps",
-     "testFiles": "**/*.{feature,features}",
-     "env": {
-        "allureResultsPath": "cypress/results",
-        "allure": true
-    }
-  }
+  "defaultCommandTimeout": 7000,
+  "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  },
+  "screenshotsFolder": "./cypress/snaps",
+  "env": {
+    "allureResultsPath": "cypress/results",
+    "allure": true,
+    "url": "http://leaftaps.com/opentaps"
+  },
+  "projectId": "296ng7"
+}
