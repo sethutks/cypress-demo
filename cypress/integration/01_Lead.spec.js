@@ -20,7 +20,7 @@ describe('Lead module test cases', () => {
         cy.contains("Leads").click();
     })
 
-    it.skip('Create Lead', () => {
+    it('Create Lead', () => {
         cy.contains("Create Lead").click();
 
         cy.get("#createLeadForm_companyName").type("TestLeaf");

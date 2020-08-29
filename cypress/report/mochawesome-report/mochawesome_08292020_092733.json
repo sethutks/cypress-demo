@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2020-08-29T03:56:13.842Z",
+    "end": "2020-08-29T03:57:33.647Z",
+    "duration": 79805,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6ac0154-1c82-49fa-93a4-98ab06e87588",
+      "title": "",
+      "fullFile": "cypress\\integration\\01_Lead.spec.js",
+      "file": "cypress\\integration\\01_Lead.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1bd1d4c1-350b-4951-a64d-194f72177a76",
+          "title": "Lead module test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Lead",
+              "fullTitle": "Lead module test cases Create Lead",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "98c14a4a-5960-4d3b-a03a-92a3f98cdbdd",
+              "parentUUID": "1bd1d4c1-350b-4951-a64d-194f72177a76",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Duplicate Lead",
+              "fullTitle": "Lead module test cases Duplicate Lead",
+              "timedOut": null,
+              "duration": 2054,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Find Leads\").click();\ncy.contains('Email').click();\ncy.get(\"input[name='emailAddress']\").type(\"abc@gmail.com\");\ncy.xpath('//button[text()=\"Find Leads\"]').click();\ncy.wait(4000);\ncy.xpath(\"(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]/a\").click();\ncy.wait(4000);\ncy.contains(\"Duplicate Lead\").click();\ncy.title().should('eq', 'Duplicate Lead | opentaps CRM');\nvar createleadName = 'Sample';\ncy.get('#createLeadForm_firstName').invoke('val').then(function ($firstName) {\n  createleadName = $firstName;\n  cy.log(\"console log\", createleadName);\n});\ncy.get(\"input[value = 'Create Lead']\").click();\ncy.wait(4000);\nvar vleadName;\ncy.get('#viewLead_firstName_sp').invoke('text').then(function ($ViewfirstName) {\n  vleadName = $ViewfirstName;\n  cy.log(\"From view lead: \", vleadName);\n});",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Lead module test cases`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Lead module test cases`\n    at ensureElement (http://leaftaps.com/__cypress/runner/cypress_runner.js:159904:24)\n    at validateType (http://leaftaps.com/__cypress/runner/cypress_runner.js:159728:16)\n    at Object.ensureSubjectByType (http://leaftaps.com/__cypress/runner/cypress_runner.js:159770:11)\n    at pushSubjectAndValidate (http://leaftaps.com/__cypress/runner/cypress_runner.js:167481:15)\n    at Context.<anonymous> (http://leaftaps.com/__cypress/runner/cypress_runner.js:167809:18)\nFrom Your Spec Code:\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\01_Lead.spec.js:56:33)\nFrom Your Spec Code:\n    at Context.eval (http://leaftaps.com/__cypress/tests?p=cypress\\integration\\01_Lead.spec.js:56:33)",
+                "diff": null
+              },
+              "uuid": "10a4388e-401a-4dae-9342-68b293ad5e74",
+              "parentUUID": "1bd1d4c1-350b-4951-a64d-194f72177a76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "10a4388e-401a-4dae-9342-68b293ad5e74"
+          ],
+          "pending": [
+            "98c14a4a-5960-4d3b-a03a-92a3f98cdbdd"
+          ],
+          "skipped": [],
+          "duration": 2054,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
